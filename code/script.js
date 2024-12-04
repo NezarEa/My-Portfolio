@@ -1,4 +1,3 @@
-// Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,34 +8,77 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
- // Initialize AOS (Animate on Scroll)
- AOS.init({
+AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
     once: true,
 });
 
-// Mobile Menu Toggle
 document.getElementById('menu-toggle').addEventListener('click', () => {
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
 });
 
-// Form Validation
 function validateForm() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return false;
-    }
-    alert("Message sent successfully!");
-    return true;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("All fields are required.");
+    return false;
+  }
+  return true;
 }
 
-// Scroll to Top
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      document.getElementById("success-message").classList.remove("hidden");
+      document.getElementById("success-message").classList.add("opacity-100");
+      form.reset(); // Reset form fields
+    } else {
+      alert("There was a problem sending your message. Please try again.");
+    }
+  } catch (error) {
+    alert("An error occurred. Please try again.");
+  }
+});
+
+function showSuccessMessage() {
+  const form = document.getElementById('contact-form');
+  const submitButton = document.getElementById('submit-button');
+  const successMessage = document.getElementById('success-message');
+
+  form.classList.add('opacity-0');
+  submitButton.disabled = true; 
+  setTimeout(() => {
+    successMessage.classList.remove('hidden');
+    successMessage.classList.add('opacity-100');
+  }, 500);
+
+  setTimeout(() => {
+    form.reset();
+    setTimeout(() => {
+      form.classList.remove('opacity-0');
+      submitButton.disabled = false;
+    }, 200);
+  }, 3000);
+}
+
 document.getElementById('back-to-top').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
@@ -44,7 +86,6 @@ document.getElementById('back-to-top').addEventListener('click', () => {
     });
 });
 
-// Dark Mode Toggle
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     document.body.classList.toggle('bg-gray-900');
     document.body.classList.toggle('text-white');
