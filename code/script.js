@@ -9,14 +9,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 AOS.init({
-    duration: 1000,
-    easing: 'ease-in-out',
-    once: true,
+  duration: 1000,
+  easing: 'ease-in-out',
+  once: true,
 });
 
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+
+// Function to open the mobile menu
+const openMenu = () => {
+  mobileMenu.classList.remove('translate-x-full');
+  overlay.classList.remove('hidden');
+  overlay.classList.add('block');
+  // Prevent body from scrolling when menu is open
+  document.body.classList.add('overflow-hidden');
+};
+
+// Function to close the mobile menu
+const closeMenu = () => {
+  mobileMenu.classList.add('translate-x-full');
+  overlay.classList.add('hidden');
+  overlay.classList.remove('block');
+  // Allow body to scroll again
+  document.body.classList.remove('overflow-hidden');
+};
+
+// Event listeners
+menuToggle.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+// Close menu when a link is clicked
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', closeMenu);
 });
 
 function validateForm() {
@@ -86,6 +115,12 @@ document.getElementById('back-to-top').addEventListener('click', () => {
     });
 });
 
+document.getElementById('link-to-top').addEventListener('click', () => {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+});
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     document.body.classList.toggle('bg-gray-900');
     document.body.classList.toggle('text-white');
