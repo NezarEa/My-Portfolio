@@ -42,3 +42,16 @@ header h1, header p {
 .h-48 {
     width: 13rem /* 192px */;
 }
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#lang-toggle,
+#lang-toggle-mobile {
+    cursor: pointer;
+    user-select: none;
+}

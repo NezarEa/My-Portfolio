@@ -20,17 +20,19 @@
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <a href="#home" style="text-decoration: none"
         class="text-3xl font-bold text-white hover:text-blue-500 transition-colors duration-300">Nezar Dev</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#home" style="text-decoration: none"
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#home" style="text-decoration: none" data-i18n="nav.home"
           class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Home</a>
-        <a href="#about" style="text-decoration: none"
+        <a href="#about" style="text-decoration: none" data-i18n="nav.about"
           class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">About</a>
-        <a href="#skills" style="text-decoration: none"
+        <a href="#skills" style="text-decoration: none" data-i18n="nav.skills"
           class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Skills</a>
-        <a href="#projects" style="text-decoration: none"
+        <a href="#projects" style="text-decoration: none" data-i18n="nav.projects"
           class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Projects</a>
-        <a href="#contact" style="text-decoration: none"
+        <a href="#contact" style="text-decoration: none" data-i18n="nav.contact"
           class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Contact</a>
+        <button id="lang-toggle"
+          class="ml-4 px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-semibold">FR</button>
       </div>
       <div class="md:hidden">
         <button id="menu-toggle" class="text-white hover:text-blue-400 focus:outline-none">
@@ -58,32 +60,36 @@
       </button>
     </div>
     <nav class="mt-8 space-y-4">
-      <a href="#home" style="text-decoration: none"
+      <a href="#home" style="text-decoration: none" data-i18n="nav.home"
         class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Home</a>
-      <a href="#about" style="text-decoration: none"
+      <a href="#about" style="text-decoration: none" data-i18n="nav.about"
         class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">About</a>
-      <a href="#skills" style="text-decoration: none"
+      <a href="#skills" style="text-decoration: none" data-i18n="nav.skills"
         class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Skills</a>
-      <a href="#projects" style="text-decoration: none"
+      <a href="#projects" style="text-decoration: none" data-i18n="nav.projects"
         class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Projects</a>
-      <a href="#contact" style="text-decoration: none"
+      <a href="#contact" style="text-decoration: none" data-i18n="nav.contact"
         class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Contact</a>
+      <div class="text-center pt-2">
+        <button id="lang-toggle-mobile"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-semibold">FR</button>
+      </div>
     </nav>
   </div>
 
   <!-- Profile Section -->
-  <section id="profile home" class="py-20 text-white from-blue-500 to-teal-500 flex items-center profile"
-    style="height: 100vh; background-image: url('./assets/background.jpg')" id="hero">
+  <section id="home" class="py-20 text-white from-blue-500 to-teal-500 flex items-center profile"
+    style="height: 100vh; background-image: url('./assets/background.jpg')">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center mt-16">
       <div class="section__pic-container m-8 md:mb-0 md:w-1/2">
         <img src="./assets/me.png" alt="Nezar EL AYACHI profile picture"
           class="rounded-full bg-contain w-80 h-80 object-cover" data-aos="fade-up" />
       </div>
       <div data-aos="fade-up" data-aos-delay="200" class="section__text md:w-2/3 text-center md:text-left">
-        <p class="section__text__p1 text-lg font-medium text-gray-400">
+        <p class="section__text__p1 text-lg font-medium text-gray-400" data-i18n="hero.greeting">
           Hello, I'm
         </p>
-        <h1 class="title text-4xl font-extrabold text-blue-500">
+        <h1 class="title text-4xl font-extrabold text-blue-500" data-i18n="hero.name">
           Nezar EL AYACHI
         </h1>
         <p class="section__text__p2 text-xl mt-2 text-gray-300">
@@ -91,12 +97,12 @@
         </p>
         <div class="btn-container mt-6 space-x-4" data-aos="fade-up" data-aos-delay="200">
           <button class="btn btn-color-2 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-            onclick="window.open('./assets/Cv.pdf')">
+            onclick="window.open('./assets/Cv.pdf')" data-i18n="buttons.cv">
             Download CV
           </button>
           <button
             class="btn btn-color-1 px-6 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white hover:text-gray-800"
-            onclick="location.href='./#contact'">
+            onclick="location.href='./#contact'" data-i18n="buttons.contact">
             Contact Info
           </button>
         </div>
@@ -118,10 +124,10 @@
   <!-- About Me Section -->
   <section class="py-20 px-4 flex items-center" style="height: 50vh" id="about">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6 text-gradient" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold mb-6 text-gradient" data-aos="fade-up" data-i18n="about.title">
         About Me
       </h2>
-      <p class="text-lg" data-aos="fade-up" data-aos-delay="400">
+      <p class="text-lg" data-aos="fade-up" data-aos-delay="400" data-i18n="about.desc">
         I'm a passionate web and mobile developer with a strong background in
         backend development and mobile applications. I enjoy building
         seamless, scalable, and intuitive experiences for users across web and
@@ -134,13 +140,13 @@
   <section class="bg-gradient-to-r from-gray-800 to-gray-900 py-20 px-4" id="skills">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-500"
-        data-aos="fade-up">
+        data-aos="fade-up" data-i18n="skills.title">
         Skills
       </h2>
 
       <!-- Web Development Skills -->
       <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.web">
           Web Development
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -194,7 +200,7 @@
 
       <!-- Backend Development Skills -->
       <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.backend">
           Backend Development
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -224,8 +230,7 @@
       <div class="mb-16">
         <h3 class="text-3xl font-semibold text-teal-400 mb-6 flex items-center justify-center" data-aos="fade-up"
           data-aos-delay="100">
-          <i class="fa-brands fa-android mr-2"></i> Mobile Development
-          (Android)
+          <i class="fa-solid fa-mobile-screen mr-2"></i>           <span data-i18n="skills.mobile">Mobile Development</span>
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
           <!-- Kotlin -->
@@ -273,10 +278,28 @@
               Retrofit
             </h4>
           </div>
+          <!-- Flutter -->
+          <div
+            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
+            data-aos="zoom-in" data-aos-delay="700" aria-label="Flutter">
+            <i class="fa-brands fa-flutter text-4xl text-white group-hover:text-gray-900"></i>
+            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
+              Flutter
+            </h4>
+          </div>
+          <!-- Swift -->
+          <div
+            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
+            data-aos="zoom-in" data-aos-delay="800" aria-label="Swift">
+            <i class="fa-brands fa-swift text-4xl text-white group-hover:text-gray-900"></i>
+            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
+              Swift
+            </h4>
+          </div>
           <!-- Firebase -->
           <div
             class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="700" aria-label="Firebase">
+            data-aos="zoom-in" data-aos-delay="900" aria-label="Firebase">
             <i class="fa-solid fa-database text-4xl text-white group-hover:text-gray-900"></i>
             <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
               Firebase
@@ -296,7 +319,7 @@
 
       <!-- Programming Languages Skills -->
       <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.languages">
           Programming Languages
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -314,7 +337,7 @@
 
       <!-- Tools Skills -->
       <div>
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.tools">
           Tools
         </h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -379,36 +402,30 @@
 
   <!-- Projects Section -->
   <section class="bg-gray-900 py-20 text-center" id="projects">
-    <h2 class="text-3xl font-semibold text-white mb-8" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-white mb-8" data-aos="fade-up" data-i18n="projects.title">
       Projects
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
+    <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
       <!-- Project 1 -->
       <div
         class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
         data-aos="fade-up">
-        <!-- Image -->
-        <img src="./assets/project.svg" alt="Screenshot of PixelHub Project"
+        <img src="./assets/project.svg" alt="PixelHub"
           class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-
         <h3 class="font-semibold text-2xl text-white mb-2">PixelHub</h3>
         <p class="mt-3 text-gray-200 text-lg">
-          A web app built with HTML, CSS, JavaScript, and PHP for dynamic
-          content.
+          A web app built with HTML, CSS, JavaScript, and PHP for dynamic content.
         </p>
-        <!-- Buttons Container -->
         <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
           <a href="https://github.com/NezarEa/Pixel-Hub-site-web" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="View PixelHub on GitHub">
+            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-brands fa-github"></i>
-            <span>Show Project on GitHub</span>
+            <span data-i18n="projects.github">Show Project on GitHub</span>
           </a>
           <a href="#" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="Demo for PixelHub Coming Soon">
+            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-solid fa-play"></i>
-            <span>Demo Mode (Soon)</span>
+            <span data-i18n="projects.coming">Coming Soon</span>
           </a>
         </div>
       </div>
@@ -417,28 +434,20 @@
       <div
         class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
         data-aos="fade-up" data-aos-delay="200">
-        <!-- Image -->
-        <img src="./assets/project_2.svg" alt="Screenshot of Meeting Camp App"
+        <img src="./assets/project_2.svg" alt="Meeting Camp App"
           class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-
-        <h3 class="font-semibold text-2xl text-white mb-2">
-          Meeting Camp App
-        </h3>
+        <h3 class="font-semibold text-2xl text-white mb-2">Meeting Camp App</h3>
         <p class="mt-3 text-gray-200 text-lg">
-          A mobile app created using Kotlin, Android Studio, and ZegoCloud for
-          backend integration.
+          A mobile app created using Kotlin, Android Studio, and ZegoCloud for backend integration.
         </p>
-        <!-- Buttons Container -->
         <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
           <a href="https://github.com/NezarEa/Meeting-Camp-App" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="View Meeting Camp App on GitHub">
+            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-brands fa-github"></i>
-            <span>Show Project on GitHub</span>
+            <span data-i18n="projects.github">Show Project on GitHub</span>
           </a>
           <a href="./assets/MeetingCamp.apk" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="Demo for Meeting Camp App Coming Soon">
+            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-solid fa-play"></i>
             <span>Demo Mode Apk</span>
           </a>
@@ -449,63 +458,54 @@
       <div
         class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
         data-aos="fade-up" data-aos-delay="400">
-        <!-- Image -->
-        <img src="./assets/project_3.svg" alt="Screenshot of Contact Book App"
+        <img src="./assets/project_3.svg" alt="Contact Book App"
           class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-
-        <h3 class="font-semibold text-2xl text-white mb-2">
-          Contact Book App
-        </h3>
+        <h3 class="font-semibold text-2xl text-white mb-2">Contact Book App</h3>
         <p class="mt-3 text-gray-200 text-lg">
-          An Android contact management application offering contact handling,
-          dark mode, language selection, quick actions like calls/SMS, recent
-          calls display, and customizable settings.
+          An Android contact management application offering contact handling, dark mode, language selection, quick actions like calls/SMS, recent calls display, and customizable settings.
         </p>
-
-        <!-- Buttons Container -->
         <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
           <a href="https://github.com/NezarEa/Contact-Book-App" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="View Contact Book App on GitHub">
+            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-brands fa-github"></i>
-            <span>Show Project on GitHub</span>
+            <span data-i18n="projects.github">Show Project on GitHub</span>
           </a>
           <a href="./assets/Contact.apk" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline"
-            aria-label="Demo for Contact Book App Coming Soon">
+            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
             <i class="fa-solid fa-play"></i>
             <span>Demo Mode Apk</span>
           </a>
         </div>
       </div>
     </div>
+    <p id="projects-loading" class="text-gray-400 mt-4" data-i18n="projects.coming">Loading projects from GitHub...</p>
   </section>
 
   <!-- Contact Section with Form Validation -->
   <section class="py-20 bg-gray-800 px-4" id="contact">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold text-white mb-6">Contact</h2>
+      <h2 class="text-3xl font-semibold text-white mb-6" data-i18n="contact.title">Contact</h2>
       <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mjkvazyz" method="POST"
         onsubmit="return validateForm()">
         <div class="flex justify-center space-x-4">
-          <input type="text" id="name" name="name" placeholder="Your Name"
+          <input type="text" id="name" name="name" data-i18n="contact.name" placeholder="Your Name"
             class="p-3 w-full sm:w-1/3 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
             required />
-          <input type="email" id="email" name="email" placeholder="Your Email"
+          <input type="email" id="email" name="email" data-i18n="contact.email" placeholder="Your Email"
             class="p-3 w-full sm:w-1/3 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
             required />
         </div>
-        <textarea id="message" name="message" placeholder="Your Message"
+        <textarea id="message" name="message" data-i18n="contact.message" placeholder="Your Message"
           class="p-3 w-full mt-4 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
           rows="5" required></textarea>
-        <button type="submit" id="submit-button"
+        <button type="submit" id="submit-button" data-i18n="contact.send"
           class="bg-blue-600 p-3 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 transform hover:scale-105">
           Send Message
         </button>
       </form>
       <div id="success-message"
         class="hidden mt-4 p-4 bg-green-500 text-white rounded-md opacity-0 transition-opacity duration-500">
-        Your message has been sent successfully!
+        <span data-i18n="contact.success">Your message has been sent successfully!</span>
       </div>
     </div>
   </section>
@@ -533,7 +533,7 @@
 
   <!-- Footer Bottom -->
   <footer class="bg-gray-900 p-5 text-center text-gray-400">
-    <p>&copy; 2024 Nezar Dev. All rights reserved.</p>
+    <p>&copy; 2024 Nezar Dev. <span data-i18n="footer.rights">All rights reserved.</span></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -543,7 +543,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script>
     VANTA.NET({
-      el: ".profile",
+      el: "#home",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
@@ -557,18 +557,6 @@
       maxDistance: 10.0,
       spacing: 16.0
     });
-    const options = {
-      strings: [
-        "Web & Mobile Developer",
-        "Backend & Frontend Enthusiast",
-        "Passionate Programmer",
-      ],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true,
-    };
-
-    const typewriter = new Typed("#typewriter", options);
   </script>
 </body>
 
