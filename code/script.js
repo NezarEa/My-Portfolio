@@ -119,7 +119,7 @@ async function fetchGitHubRepos() {
     const res = await fetch("https://api.github.com/users/NezarEa/repos?sort=updated&per_page=9&type=owner");
     if (!res.ok) throw new Error("GitHub API error");
     const repos = await res.json();
-    const wanted = ["MovieHub", "website-E-commerce", "DabaTaxi"];
+    const wanted = [];
     const filtered = repos.filter(r => wanted.includes(r.name));
     const container = document.getElementById("projects-container");
     const loading = document.getElementById("projects-loading");
