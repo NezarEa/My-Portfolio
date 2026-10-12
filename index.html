@@ -4,583 +4,772 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <title>Nezar EL AYACHI — Web &amp; Mobile Developer</title>
+  <meta name="description"
+    content="Portfolio of Nezar EL AYACHI, a web and mobile developer building web and Android applications with Laravel, Next.js, Kotlin, Flutter and Firebase." />
+  <meta name="author" content="Nezar EL AYACHI" />
+  <meta name="keywords"
+    content="Nezar EL AYACHI, web developer, mobile developer, Android, Kotlin, Flutter, Laravel, React, Next.js, Firebase, Morocco" />
+  <meta name="theme-color" content="#0a0f1e" />
+  <link rel="canonical" href="https://nezarea.github.io/My-Portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nezar EL AYACHI — Web &amp; Mobile Developer" />
+  <meta property="og:description"
+    content="Web and mobile developer building web and Android applications with Laravel, Next.js, Kotlin, Flutter and Firebase." />
+  <meta property="og:url" content="https://nezarea.github.io/My-Portfolio/" />
+  <meta property="og:image" content="https://nezarea.github.io/My-Portfolio/assets/me.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nezar EL AYACHI — Web &amp; Mobile Developer" />
+  <meta name="twitter:description"
+    content="Web and mobile developer building web and Android applications." />
+  <meta name="twitter:image" content="https://nezarea.github.io/My-Portfolio/assets/me.png" />
+
+  <link rel="icon" href="./assets/logo site.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="./assets/logo site.svg" />
-  <link href="./code/styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <link href="./code/output.css" rel="stylesheet" />
-  <title>Nezar Dev</title>
+  <link href="./code/styles.css" rel="stylesheet" />
+
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.classList.add("light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nezar EL AYACHI",
+    "jobTitle": "Web & Mobile Developer",
+    "email": "nezarelayachi@gmail.com",
+    "telephone": "+212703588391",
+    "url": "https://nezarea.github.io/My-Portfolio/",
+    "image": "https://nezarea.github.io/My-Portfolio/assets/me.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tamesna", "addressCountry": "MA" },
+    "knowsLanguage": ["Arabic", "English", "French"],
+    "sameAs": [
+      "https://github.com/NezarEa",
+      "https://www.linkedin.com/in/nezar-el-ayachi-68b0192a2/"
+    ]
+  }
+  </script>
 </head>
 
-<body class="font-sans bg-gray-900 text-white">
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-90 p-4 shadow-lg">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <a href="#home" style="text-decoration: none"
-        class="text-3xl font-bold text-white hover:text-blue-500 transition-colors duration-300">Nezar Dev</a>
-      <div class="hidden md:flex space-x-8 items-center">
-        <a href="#home" style="text-decoration: none" data-i18n="nav.home"
-          class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Home</a>
-        <a href="#about" style="text-decoration: none" data-i18n="nav.about"
-          class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">About</a>
-        <a href="#skills" style="text-decoration: none" data-i18n="nav.skills"
-          class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Skills</a>
-        <a href="#projects" style="text-decoration: none" data-i18n="nav.projects"
-          class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Projects</a>
-        <a href="#contact" style="text-decoration: none" data-i18n="nav.contact"
-          class="text-white hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Contact</a>
-        <button id="lang-toggle"
-          class="ml-4 px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-semibold">FR</button>
-      </div>
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white hover:text-blue-400 focus:outline-none">
-          <!-- Hamburger Icon -->
-          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+<body class="bg-app text-body antialiased">
+  <div id="scroll-progress"></div>
 
-  <!-- Overlay (for when mobile menu is open) -->
-  <div id="overlay" class="fixed inset-0 bg-opacity-50 hidden z-40"></div>
+  <a href="#home"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[70] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-blue-600 focus:text-white"
+    data-i18n="a11y.skip">Skip to content</a>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu"
-    class="fixed top-0 right-0 w-3/4 max-w-xs h-full bg-gray-800 text-white p-4 transform translate-x-full transition-transform duration-300 z-50">
-    <div class="flex justify-end">
-      <button id="menu-close" class="text-white hover:text-blue-400 focus:outline-none">
-        <!-- Close (X) Icon -->
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-    <nav class="mt-8 space-y-4">
-      <a href="#home" style="text-decoration: none" data-i18n="nav.home"
-        class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Home</a>
-      <a href="#about" style="text-decoration: none" data-i18n="nav.about"
-        class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">About</a>
-      <a href="#skills" style="text-decoration: none" data-i18n="nav.skills"
-        class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Skills</a>
-      <a href="#projects" style="text-decoration: none" data-i18n="nav.projects"
-        class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Projects</a>
-      <a href="#contact" style="text-decoration: none" data-i18n="nav.contact"
-        class="block text-center hover:bg-gray-700 hover:text-blue-400 p-2 rounded-md transition-colors duration-300">Contact</a>
-      <div class="text-center pt-2">
-        <button id="lang-toggle-mobile"
-          class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-semibold">FR</button>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 nav-bg border-b border-app">
+    <nav class="max-w-6xl mx-auto px-4">
+      <div class="flex h-16 items-center justify-between gap-4">
+        <a href="#home" class="flex items-center gap-2 text-lg font-bold heading">
+          <img src="./assets/logo site.svg" alt="Nezar Dev logo" class="h-8 w-8" />
+          <span>Nezar <span class="gradient-text">Dev</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+          <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+          <a href="#education" class="nav-link" data-i18n="nav.education">Education</a>
+          <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="icon-btn" type="button" data-i18n-aria="a11y.theme"
+            aria-label="Toggle color theme">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <button id="lang-toggle" class="lang-btn" type="button" aria-label="Change language">FR</button>
+          <button id="menu-toggle" class="icon-btn md:hidden" type="button" data-i18n-aria="a11y.menu"
+            aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
       </div>
     </nav>
-  </div>
+  </header>
 
-  <!-- Profile Section -->
-  <section id="home" class="py-20 text-white from-blue-500 to-teal-500 flex items-center profile"
-    style="height: 100vh; background-image: url('./assets/background.jpg')">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center mt-16">
-      <div class="section__pic-container m-8 md:mb-0 md:w-1/2">
-        <img src="./assets/me.png" alt="Nezar EL AYACHI profile picture"
-          class="rounded-full bg-contain w-80 h-80 object-cover" data-aos="fade-up" />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200" class="section__text md:w-2/3 text-center md:text-left">
-        <p class="section__text__p1 text-lg font-medium text-gray-400" data-i18n="hero.greeting">
-          Hello, I'm
-        </p>
-        <h1 class="title text-4xl font-extrabold text-blue-500" data-i18n="hero.name">
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-40"></div>
+  <aside id="mobile-menu"
+    class="fixed top-0 right-0 w-3/4 max-w-xs h-full bg-soft text-body p-5 border-l border-app transform translate-x-full transition-transform duration-300 z-50">
+    <div class="flex justify-end">
+      <button id="menu-close" class="icon-btn" type="button" data-i18n-aria="a11y.close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="mt-8 flex flex-col gap-1">
+      <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+      <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+      <a href="#education" class="nav-link" data-i18n="nav.education">Education</a>
+      <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      <button id="lang-toggle-mobile" class="lang-btn mt-4 self-start" type="button"
+        aria-label="Change language">FR</button>
+    </nav>
+  </aside>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div data-aos="fade-up">
+        <p class="text-blue-400 font-medium" data-i18n="hero.greeting">Hello, I'm</p>
+        <h1 class="heading text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-2 leading-tight" data-i18n="hero.name">
           Nezar EL AYACHI
         </h1>
-        <p class="section__text__p2 text-xl mt-2 text-gray-300">
-          <span id="typewriter"></span>
+        <p class="mt-3 text-xl sm:text-2xl font-semibold">
+          <span class="gradient-text" id="typewriter"></span>
         </p>
-        <div class="btn-container mt-6 space-x-4" data-aos="fade-up" data-aos-delay="200">
-          <button class="btn btn-color-2 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-            onclick="window.open('./assets/Cv.pdf')" data-i18n="buttons.cv">
-            Download CV
-          </button>
-          <button
-            class="btn btn-color-1 px-6 py-3 bg-transparent border-2 border-white text-white rounded-md hover:bg-white hover:text-gray-800"
-            onclick="location.href='./#contact'" data-i18n="buttons.contact">
-            Contact Info
+        <p class="mt-5 text-muted2 max-w-xl leading-relaxed" data-i18n="hero.tagline">
+          I design and build web and mobile products — from REST APIs and databases to polished, responsive
+          interfaces.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="chip"><i class="fa-solid fa-location-dot text-blue-400"></i>
+            <span data-i18n="hero.location">Tamesna, Morocco</span></span>
+          <span class="chip"><i class="fa-solid fa-circle-check text-teal-400"></i>
+            <span data-i18n="hero.availability">Open to opportunities</span></span>
+        </div>
+
+        <div class="mt-7 flex flex-wrap items-center gap-3 no-print" data-aos="fade-up" data-aos-delay="150">
+          <a href="./assets/Cv.pdf" target="_blank" rel="noopener" class="btn-primary">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span data-i18n="hero.cta.cv">Download CV</span>
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="hero.cta.contact">Get in touch</span>
+          </a>
+          <button id="print-resume" type="button" class="btn-ghost">
+            <i class="fa-solid fa-print"></i>
+            <span data-i18n="hero.cta.print">Print résumé</span>
           </button>
         </div>
-        <div id="socials-container" data-aos="fade-up" data-aos-delay="400" class="m-6 space-x-6">
-          <div class="space-x-6 text-2xl">
-            <i class="fa-brands fa-linkedin text-white hover:text-blue-400 cursor-pointer transition duration-300"
-              onclick="location.href='https://www.linkedin.com/in/nezar-el-ayachi-68b0192a2/'"
-              aria-label="LinkedIn"></i>
-            <i class="fa-brands fa-github text-white hover:text-gray-400 cursor-pointer transition duration-300"
-              onclick="location.href='https://github.com/NezarEa'" aria-label="GitHub"></i>
-            <i class="fa fa-envelope text-white hover:text-red-400 cursor-pointer transition duration-300"
-              onclick="location.href='mailto:nezarelayachi@gmail.com'" aria-label="Email"></i>
+
+        <div class="mt-8 flex items-center gap-5 text-2xl no-print" data-aos="fade-up" data-aos-delay="250">
+          <a href="https://github.com/NezarEa" target="_blank" rel="noopener" aria-label="GitHub"
+            class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nezar-el-ayachi-68b0192a2/" target="_blank" rel="noopener"
+            aria-label="LinkedIn" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:nezarelayachi@gmail.com" aria-label="Email"
+            class="hover:text-teal-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="relative">
+          <div
+            class="absolute -inset-4 rounded-full bg-gradient-to-tr from-blue-600/30 to-teal-500/30 blur-2xl">
+          </div>
+          <img src="./assets/me.png" alt="Nezar EL AYACHI"
+            class="relative w-56 h-56 sm:w-80 sm:h-80 rounded-full object-cover ring-4 ring-blue-500/40" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="scroll-mt-24 py-20 bg-soft">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="about.subtitle">Product-oriented developer</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="about.title">About me</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2 surface rounded-2xl p-6 sm:p-8" data-aos="fade-up">
+          <i class="fa-solid fa-quote-left text-2xl gradient-text"></i>
+          <p class="mt-4 text-muted2 leading-relaxed" data-i18n="about.p1">
+            Product-oriented web and mobile developer with hands-on experience designing, building and improving web
+            and Android applications.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="chip">Autonomous</span>
+            <span class="chip">Curious</span>
+            <span class="chip">Problem solving</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Time management</span>
+          </div>
+        </div>
+
+        <div class="surface rounded-2xl p-6 space-y-5" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex items-start gap-3">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="about.facts.location">Location</p>
+              <p class="heading font-medium" data-i18n="about.facts.locationValue">Tamesna, Morocco</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-language"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="about.facts.languages">Languages</p>
+              <p class="heading font-medium" data-i18n="about.facts.languagesValue">Arabic, English, French</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-briefcase"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="about.facts.availability">Availability</p>
+              <p class="heading font-medium" data-i18n="about.facts.availabilityValue">Open to internships &amp; junior roles</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="about.facts.education">Education</p>
+              <p class="heading font-medium" data-i18n="about.facts.educationValue">Licence in Web &amp; Mobile Development</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section class="py-20 px-4 flex items-center" style="height: 50vh" id="about">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6 text-gradient" data-aos="fade-up" data-i18n="about.title">
-        About Me
-      </h2>
-      <p class="text-lg" data-aos="fade-up" data-aos-delay="400" data-i18n="about.desc">
-        I'm a passionate web and mobile developer with a strong background in
-        backend development and mobile applications. I enjoy building
-        seamless, scalable, and intuitive experiences for users across web and
-        mobile platforms.
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="scroll-mt-24 py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="experience.subtitle">Where I've worked</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="experience.title">Experience</h2>
+      </div>
+
+      <div class="timeline space-y-8">
+        <!-- item 0 -->
+        <article class="timeline-item" data-aos="fade-up">
+          <span class="timeline-dot"></span>
+          <div class="surface rounded-2xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="heading text-lg font-semibold" data-i18n="experience.items.0.role">Mobile Application Developer</h3>
+                <p class="text-blue-400 font-medium" data-i18n="experience.items.0.company">4D Business Consulting (4DBC)</p>
+              </div>
+              <div class="text-sm text-muted2 sm:text-right">
+                <p><i class="fa-regular fa-calendar"></i> <span data-i18n="experience.items.0.period">May 2026 – Jul 2026</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="experience.items.0.location">Agdal, Rabat</span></p>
+              </div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-muted2 list-disc list-outside pl-5">
+              <li data-i18n="experience.items.0.points.0"></li>
+              <li data-i18n="experience.items.0.points.1"></li>
+              <li data-i18n="experience.items.0.points.2"></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- item 1 -->
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="timeline-dot"></span>
+          <div class="surface rounded-2xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="heading text-lg font-semibold" data-i18n="experience.items.1.role">Mobile Application Developer</h3>
+                <p class="text-blue-400 font-medium" data-i18n="experience.items.1.company">4D Business Consulting</p>
+              </div>
+              <div class="text-sm text-muted2 sm:text-right">
+                <p><i class="fa-regular fa-calendar"></i> <span data-i18n="experience.items.1.period">Mar 2025 – Apr 2025</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="experience.items.1.location">Agdal, Rabat</span></p>
+              </div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-muted2 list-disc list-outside pl-5">
+              <li data-i18n="experience.items.1.points.0"></li>
+              <li data-i18n="experience.items.1.points.1"></li>
+              <li data-i18n="experience.items.1.points.2"></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education" class="scroll-mt-24 py-20 bg-soft">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="education.subtitle">My academic path</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="education.title">Education</h2>
+      </div>
+
+      <div class="timeline space-y-8">
+        <article class="timeline-item is-edu" data-aos="fade-up">
+          <span class="timeline-dot"></span>
+          <div class="surface rounded-2xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="heading text-lg font-semibold" data-i18n="education.items.0.degree">Licence in Web &amp; Mobile Development</h3>
+                <p class="text-teal-400 font-medium" data-i18n="education.items.0.school">Institut Supérieur de Management, d'Administration et de Génie Informatique</p>
+              </div>
+              <div class="text-sm text-muted2 sm:text-right">
+                <p><i class="fa-regular fa-calendar"></i> <span data-i18n="education.items.0.period">Oct 2025 – Aug 2026</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="education.items.0.location">Agdal, Rabat</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item is-edu" data-aos="fade-up" data-aos-delay="100">
+          <span class="timeline-dot"></span>
+          <div class="surface rounded-2xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="heading text-lg font-semibold" data-i18n="education.items.1.degree">Specialized Technician in Mobile Development</h3>
+                <p class="text-teal-400 font-medium" data-i18n="education.items.1.school">Cité des Métiers et des Compétences</p>
+              </div>
+              <div class="text-sm text-muted2 sm:text-right">
+                <p><i class="fa-regular fa-calendar"></i> <span data-i18n="education.items.1.period">Sep 2023 – Jun 2025</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="education.items.1.location">Tamesna, Rabat</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-item is-edu" data-aos="fade-up" data-aos-delay="200">
+          <span class="timeline-dot"></span>
+          <div class="surface rounded-2xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="heading text-lg font-semibold" data-i18n="education.items.2.degree">Baccalaureate — Physical Sciences</h3>
+                <p class="text-teal-400 font-medium" data-i18n="education.items.2.school">Mohammad Essarraj High School</p>
+              </div>
+              <div class="text-sm text-muted2 sm:text-right">
+                <p><i class="fa-regular fa-calendar"></i> <span data-i18n="education.items.2.period">Sep 2022 – Jun 2023</span></p>
+                <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="education.items.2.location">Sidi Yahya Zaer</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="scroll-mt-24 py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="skills.subtitle">What I work with</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="skills.title">Skills</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-code text-blue-400"></i>
+            <span data-i18n="skills.groups.web">Web Development</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+            <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">TailwindCSS</span>
+            <span class="chip">Bootstrap</span><span class="chip">Materialize</span><span class="chip">Three.js</span>
+            <span class="chip">Laravel</span><span class="chip">Symfony</span><span class="chip">Express.js</span>
+          </div>
+        </div>
+
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-server text-teal-400"></i>
+            <span data-i18n="skills.groups.backend">Backend</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">Symfony</span>
+            <span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-brands fa-android text-green-400"></i>
+            <span data-i18n="skills.groups.mobile">Mobile (Android)</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Kotlin</span><span class="chip">Android SDK</span><span class="chip">Android Studio</span>
+            <span class="chip">XML / Jetpack</span><span class="chip">Retrofit</span><span class="chip">Firebase</span>
+            <span class="chip">SQLite</span><span class="chip">Flutter</span>
+          </div>
+        </div>
+
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-database text-amber-400"></i>
+            <span data-i18n="skills.groups.db">Databases</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Firebase</span>
+            <span class="chip">MySQL Workbench</span><span class="chip">phpMyAdmin</span>
+          </div>
+        </div>
+
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-toolbox text-purple-400"></i>
+            <span data-i18n="skills.groups.tools">Tools</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span>
+            <span class="chip">VS Code</span><span class="chip">Android Studio</span><span class="chip">XAMPP</span>
+          </div>
+        </div>
+
+        <div class="surface skill-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="heading font-semibold flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-people-group text-rose-400"></i>
+            <span data-i18n="skills.groups.soft">Soft skills</span>
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Communication</span><span class="chip">Problem solving</span>
+            <span class="chip">Time management</span><span class="chip">Teamwork</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="surface rounded-2xl p-6 sm:p-8 mt-6" data-aos="fade-up">
+        <h3 class="heading font-semibold flex items-center gap-2 mb-6">
+          <i class="fa-solid fa-language text-blue-400"></i>
+          <span data-i18n="languages.title">Languages</span>
+        </h3>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="heading font-medium" data-i18n="languages.items.0.name">Arabic</span>
+              <span class="text-muted2" data-i18n="languages.items.0.level">Native</span>
+            </div>
+            <div class="bar"><span data-level="100"></span></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="heading font-medium" data-i18n="languages.items.1.name">English</span>
+              <span class="text-muted2" data-i18n="languages.items.1.level">Advanced</span>
+            </div>
+            <div class="bar"><span data-level="80"></span></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2">
+              <span class="heading font-medium" data-i18n="languages.items.2.name">French</span>
+              <span class="text-muted2" data-i18n="languages.items.2.level">Basic</span>
+            </div>
+            <div class="bar"><span data-level="40"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="scroll-mt-24 py-20 bg-soft">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="projects.subtitle">Selected work</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="projects.title">Projects</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- MedicalExtra -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up">
+          <div class="project-media">
+            <i class="fa-solid fa-heart-pulse text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">MedicalExtra</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.0.desc">
+              Multilingual e-commerce platform for parapharmacy products.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span>
+              <span class="chip">Tailwind</span><span class="chip">SQLite</span><span class="chip">Node.js</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/MedicalExtras" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+              <a href="https://www.medicalextra.ma/" target="_blank" rel="noopener" class="btn-primary text-sm">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="projects.buttons.demo">Live demo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ecommerce WebSite -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-media">
+            <i class="fa-solid fa-cart-shopping text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">Ecommerce WebSite</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.1.desc">
+              Secure, high-performance e-commerce website.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span>
+              <span class="chip">JavaScript</span><span class="chip">Tailwind</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/website-E-commerce" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+              <a href="https://nezarea.github.io/website-E-commerce/" target="_blank" rel="noopener" class="btn-primary text-sm">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="projects.buttons.demo">Live demo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Daba Taxi -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-media">
+            <i class="fa-solid fa-taxi text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">Daba Taxi</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.2.desc">
+              Android app for managing taxi rides with real-time maps.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Kotlin</span><span class="chip">XML</span><span class="chip">Firebase</span>
+              <span class="chip">Maps API</span><span class="chip">Retrofit</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/DabaTaxi" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EcoTrack -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up">
+          <div class="project-media">
+            <i class="fa-solid fa-leaf text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">EcoTrack</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.3.desc">
+              Mobile app to track and reduce your daily ecological footprint.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Kotlin</span><span class="chip">Firebase</span><span class="chip">Material 3</span>
+              <span class="chip">Retrofit</span><span class="chip">MPAndroidChart</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PixelHub -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-media">
+            <i class="fa-solid fa-cubes text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">PixelHub</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.4.desc">
+              Dynamic web app built with HTML, CSS, JavaScript and PHP.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+              <span class="chip">PHP</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/Pixel-Hub-site-web" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Meeting Camp App -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-media">
+            <i class="fa-solid fa-video text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">Meeting Camp App</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.5.desc">
+              Video-meeting mobile app built with Kotlin and ZegoCloud.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Kotlin</span><span class="chip">Android</span><span class="chip">ZegoCloud</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/Meeting-Camp-App" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+              <a href="./assets/MeetingCamp.apk" class="btn-primary text-sm">
+                <i class="fa-brands fa-android"></i><span data-i18n="projects.buttons.apk">Demo APK</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Contact Book App -->
+        <article class="surface project-card rounded-2xl flex flex-col" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-media">
+            <i class="fa-solid fa-address-book text-6xl text-white/70"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="heading text-xl font-semibold">Contact Book App</h3>
+            <p class="mt-2 text-sm text-muted2 leading-relaxed" data-i18n="projects.items.6.desc">
+              Android contact manager with dark mode and quick actions.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Kotlin</span><span class="chip">Android</span><span class="chip">SQLite</span>
+            </div>
+            <div class="mt-auto pt-5 flex flex-wrap gap-3">
+              <a href="https://github.com/NezarEa/Contact-Book-App" target="_blank" rel="noopener" class="btn-ghost text-sm">
+                <i class="fa-brands fa-github"></i><span data-i18n="projects.buttons.github">Code</span>
+              </a>
+              <a href="./assets/Contact.apk" class="btn-primary text-sm">
+                <i class="fa-brands fa-android"></i><span data-i18n="projects.buttons.apk">Demo APK</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-10" data-aos="fade-up">
+        <a href="https://github.com/NezarEa" target="_blank" rel="noopener" class="btn-ghost">
+          <i class="fa-brands fa-github"></i>
+          <span data-i18n="projects.viewAll">View all on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="scroll-mt-24 py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="gradient-text section-eyebrow" data-i18n="contact.subtitle">Let's build something</p>
+        <h2 class="heading text-3xl sm:text-4xl font-bold mt-2" data-i18n="contact.title">Contact</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8">
+        <div class="lg:col-span-2 space-y-4" data-aos="fade-up">
+          <a href="mailto:nezarelayachi@gmail.com" class="surface rounded-2xl p-5 flex items-center gap-4 block">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="contact.info.email">Email</p>
+              <p class="heading font-medium break-all">nezarelayachi@gmail.com</p>
+            </div>
+          </a>
+          <a href="tel:+212703588391" class="surface rounded-2xl p-5 flex items-center gap-4 block">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="contact.info.phone">Phone</p>
+              <p class="heading font-medium">+212 703 588 391</p>
+            </div>
+          </a>
+          <div class="surface rounded-2xl p-5 flex items-center gap-4">
+            <span class="icon-btn shrink-0 !cursor-default"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-muted2" data-i18n="contact.info.location">Location</p>
+              <p class="heading font-medium" data-i18n="hero.location">Tamesna, Morocco</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 surface rounded-2xl p-6 sm:p-8" data-aos="fade-up" data-aos-delay="150">
+          <form id="contact-form" action="https://formspree.io/f/mjkvazyz" method="POST" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input type="text" id="name" name="name" data-i18n="contact.name" placeholder="Your name"
+                class="field" required />
+              <input type="email" id="email" name="email" data-i18n="contact.email" placeholder="Your email"
+                class="field" required />
+            </div>
+            <textarea id="message" name="message" data-i18n="contact.message" placeholder="Your message" rows="6"
+              class="field" required></textarea>
+            <button type="submit" id="submit-button" class="btn-primary w-full justify-center">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span data-i18n="contact.send">Send message</span>
+            </button>
+          </form>
+          <div id="success-message"
+            class="hidden mt-4 p-4 rounded-xl bg-teal-500/15 border border-teal-500/40 text-teal-300">
+            <i class="fa-solid fa-circle-check"></i>
+            <span data-i18n="contact.success">Your message has been sent successfully!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-soft border-t border-app py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-5">
+      <a href="#home" class="flex items-center gap-2 text-lg font-bold heading">
+        <img src="./assets/logo site.svg" alt="Nezar Dev logo" class="h-7 w-7" />
+        <span>Nezar <span class="gradient-text">Dev</span></span>
+      </a>
+      <div class="flex items-center gap-5 text-xl">
+        <a href="https://github.com/NezarEa" target="_blank" rel="noopener" aria-label="GitHub"
+          class="text-muted2 hover:text-blue-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nezar-el-ayachi-68b0192a2/" target="_blank" rel="noopener"
+          aria-label="LinkedIn" class="text-muted2 hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:nezarelayachi@gmail.com" aria-label="Email"
+          class="text-muted2 hover:text-teal-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="text-sm text-muted2 text-center">
+        &copy; <span id="year">2026</span> Nezar Dev.
+        <span data-i18n="footer.rights">All rights reserved.</span>
+      </p>
+      <p class="text-xs text-muted2 text-center" data-i18n="footer.license">
+        Personal data &amp; content — all rights reserved.
       </p>
     </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="bg-gradient-to-r from-gray-800 to-gray-900 py-20 px-4" id="skills">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-500"
-        data-aos="fade-up" data-i18n="skills.title">
-        Skills
-      </h2>
-
-      <!-- Web Development Skills -->
-      <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.web">
-          Web Development
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
-          <!-- HTML5 -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="200" aria-label="HTML5">
-            <i class="fa-brands fa-html5 text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              HTML5
-            </h4>
-          </div>
-          <!-- CSS3 -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="300" aria-label="CSS3">
-            <i class="fa-brands fa-css3-alt text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              CSS3
-            </h4>
-          </div>
-          <!-- JavaScript -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="400" aria-label="JavaScript">
-            <i class="fa-brands fa-js text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              JavaScript
-            </h4>
-          </div>
-          <!-- Bootstrap -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="500" aria-label="Bootstrap">
-            <i class="fa-brands fa-bootstrap text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Bootstrap
-            </h4>
-          </div>
-          <!-- Tailwind CSS -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="600" aria-label="Tailwind CSS">
-            <i class="fa-brands fa-css3 text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Tailwind CSS
-            </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Backend Development Skills -->
-      <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.backend">
-          Backend Development
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
-          <!-- PHP -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="200" aria-label="PHP">
-            <i class="fa-brands fa-php text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              PHP
-            </h4>
-          </div>
-          <!-- MySQL -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="300" aria-label="MySQL">
-            <i class="fa-solid fa-database text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              MySQL
-            </h4>
-          </div>
-          <!-- Add more backend skills as needed -->
-        </div>
-      </div>
-
-      <!-- Mobile Development Skills -->
-      <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6 flex items-center justify-center" data-aos="fade-up"
-          data-aos-delay="100">
-          <i class="fa-solid fa-mobile-screen mr-2"></i>           <span data-i18n="skills.mobile">Mobile Development</span>
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
-          <!-- Kotlin -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="200" aria-label="Kotlin">
-            <i class="fa-brands fa-kickstarter text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Kotlin
-            </h4>
-          </div>
-          <!-- Android SDK -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="300" aria-label="Android SDK">
-            <i class="fa-brands fa-android text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Android SDK
-            </h4>
-          </div>
-          <!-- Android Studio -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="400" aria-label="Android Studio">
-            <i class="fa-brands fa-android text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Android Studio
-            </h4>
-          </div>
-          <!-- XML/JetPack -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="500" aria-label="XML/JetPack">
-            <i class="fa-solid fa-code text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              XML/JetPack
-            </h4>
-          </div>
-          <!-- Retrofit -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="600" aria-label="Retrofit">
-            <i class="fa-brands fa-usps text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Retrofit
-            </h4>
-          </div>
-          <!-- Flutter -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="700" aria-label="Flutter">
-            <i class="fa-brands fa-flutter text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Flutter
-            </h4>
-          </div>
-          <!-- Swift -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="800" aria-label="Swift">
-            <i class="fa-brands fa-swift text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Swift
-            </h4>
-          </div>
-          <!-- Firebase -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="900" aria-label="Firebase">
-            <i class="fa-solid fa-database text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Firebase
-            </h4>
-          </div>
-          <!-- SQLite -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="800" aria-label="SQLite">
-            <i class="fa-solid fa-database text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              SQLite
-            </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Programming Languages Skills -->
-      <div class="mb-16">
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.languages">
-          Programming Languages
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
-          <!-- Python -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="200" aria-label="Python">
-            <i class="fa-brands fa-python text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Python
-            </h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools Skills -->
-      <div>
-        <h3 class="text-3xl font-semibold text-teal-400 mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="skills.tools">
-          Tools
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8">
-          <!-- Git -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="200" aria-label="Git">
-            <i class="fa-brands fa-git-alt text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Git
-            </h4>
-          </div>
-          <!-- GitHub -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="300" aria-label="GitHub">
-            <i class="fa-brands fa-github text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              GitHub
-            </h4>
-          </div>
-          <!-- Visual Studio Build -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="600" aria-label="Visual Studio Build">
-            <i class="fa-solid fa-code text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Visual Studio Build
-            </h4>
-          </div>
-          <!-- Docker -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="700" aria-label="Docker">
-            <i class="fa-brands fa-docker text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Docker
-            </h4>
-          </div>
-          <!-- Workbench -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="800" aria-label="Workbench">
-            <i class="fa-solid fa-database text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              Workbench
-            </h4>
-          </div>
-          <!-- XAMPP -->
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-teal-500 hover:shadow-teal-500/50 group"
-            data-aos="zoom-in" data-aos-delay="900" aria-label="XAMPP">
-            <i class="fa-solid fa-cogs text-4xl text-white group-hover:text-gray-900"></i>
-            <h4 class="mt-4 text-lg font-semibold text-white group-hover:text-gray-900">
-              XAMPP
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="bg-gray-900 py-20 text-center" id="projects">
-    <h2 class="text-3xl font-semibold text-white mb-8" data-aos="fade-up" data-i18n="projects.title">
-      Projects
-    </h2>
-    <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
-      <!-- Project 1 -->
-      <div
-        class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
-        data-aos="fade-up">
-        <img src="./assets/project.svg" alt="PixelHub"
-          class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-        <h3 class="font-semibold text-2xl text-white mb-2">PixelHub</h3>
-        <p class="mt-3 text-gray-200 text-lg">
-          A web app built with HTML, CSS, JavaScript, and PHP for dynamic content.
-        </p>
-        <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-          <a href="https://github.com/NezarEa/Pixel-Hub-site-web" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-brands fa-github"></i>
-            <span data-i18n="projects.github">Show Project on GitHub</span>
-          </a>
-          <a href="#" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-solid fa-play"></i>
-            <span data-i18n="projects.coming">Coming Soon</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- MedicalExtra -->
-      <div
-        class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
-        data-aos="fade-up" data-aos-delay="200">
-        <img src="./assets/medicalExtra.png" alt="MedicalExtra"
-          class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-        <h3 class="font-semibold text-2xl text-white mb-2">MedicalExtra</h3>
-        <p class="mt-3 text-gray-200 text-lg">
-          A multilingual e-commerce medical supplies platform built with Next.js, React, and SQLite, featuring a product catalog, search, cart, and admin dashboard.
-        </p>
-        <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-          <a href="https://github.com/NezarEa/MedicalExtras" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-brands fa-github"></i>
-            <span data-i18n="projects.github">Show Project on GitHub</span>
-          </a>
-          <a href="https://www.medicalextra.ma/" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-solid fa-play"></i>
-            <span>Live Demo</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div
-        class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
-        data-aos="fade-up" data-aos-delay="300">
-        <img src="./assets/project_2.svg" alt="Meeting Camp App"
-          class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-        <h3 class="font-semibold text-2xl text-white mb-2">Meeting Camp App</h3>
-        <p class="mt-3 text-gray-200 text-lg">
-          A mobile app created using Kotlin, Android Studio, and ZegoCloud for backend integration.
-        </p>
-        <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-          <a href="https://github.com/NezarEa/Meeting-Camp-App" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-brands fa-github"></i>
-            <span data-i18n="projects.github">Show Project on GitHub</span>
-          </a>
-          <a href="./assets/MeetingCamp.apk" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-solid fa-play"></i>
-            <span>Demo Mode Apk</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div
-        class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50"
-        data-aos="fade-up" data-aos-delay="400">
-        <img src="./assets/project_3.svg" alt="Contact Book App"
-          class="w-full h-56 object-cover rounded-lg mb-4 transform transition-transform duration-500 hover:scale-110" />
-        <h3 class="font-semibold text-2xl text-white mb-2">Contact Book App</h3>
-        <p class="mt-3 text-gray-200 text-lg">
-          An Android contact management application offering contact handling, dark mode, language selection, quick actions like calls/SMS, recent calls display, and customizable settings.
-        </p>
-        <div class="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-          <a href="https://github.com/NezarEa/Contact-Book-App" style="text-decoration: none"
-            class="text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-brands fa-github"></i>
-            <span data-i18n="projects.github">Show Project on GitHub</span>
-          </a>
-          <a href="./assets/Contact.apk" style="text-decoration: none"
-            class="text-white bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full transition duration-300 w-full sm:w-auto flex items-center justify-center space-x-2 no-underline">
-            <i class="fa-solid fa-play"></i>
-            <span>Demo Mode Apk</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <p id="projects-loading" class="text-gray-400 mt-4" data-i18n="projects.coming">Loading projects from GitHub...</p>
-  </section>
-
-  <!-- Contact Section with Form Validation -->
-  <section class="py-20 bg-gray-800 px-4" id="contact">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold text-white mb-6" data-i18n="contact.title">Contact</h2>
-      <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mjkvazyz" method="POST"
-        onsubmit="return validateForm()">
-        <div class="flex justify-center space-x-4">
-          <input type="text" id="name" name="name" data-i18n="contact.name" placeholder="Your Name"
-            class="p-3 w-full sm:w-1/3 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-            required />
-          <input type="email" id="email" name="email" data-i18n="contact.email" placeholder="Your Email"
-            class="p-3 w-full sm:w-1/3 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-            required />
-        </div>
-        <textarea id="message" name="message" data-i18n="contact.message" placeholder="Your Message"
-          class="p-3 w-full mt-4 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
-          rows="5" required></textarea>
-        <button type="submit" id="submit-button" data-i18n="contact.send"
-          class="bg-blue-600 p-3 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 transform hover:scale-105">
-          Send Message
-        </button>
-      </form>
-      <div id="success-message"
-        class="hidden mt-4 p-4 bg-green-500 text-white rounded-md opacity-0 transition-opacity duration-500">
-        <span data-i18n="contact.success">Your message has been sent successfully!</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-6xl mx-auto flex justify-center items-center">
-      <div class="space-x-6 text-2xl">
-        <i class="fa-brands fa-linkedin text-white hover:text-blue-400 cursor-pointer transition duration-300"
-          onclick="location.href='https://www.linkedin.com/in/nezar-el-ayachi-68b0192a2/'" aria-label="LinkedIn"></i>
-        <i class="fa-brands fa-github text-white hover:text-gray-400 cursor-pointer transition duration-300"
-          onclick="location.href='https://github.com/NezarEa'" aria-label="GitHub"></i>
-        <i class="fa fa-envelope text-white hover:text-red-400 cursor-pointer transition duration-300"
-          onclick="location.href='mailto:nezarelayachi@gmail.com'" aria-label="Email"></i>
-      </div>
-    </div>
   </footer>
 
-  <!-- Back to Top Button -->
   <button id="back-to-top"
-    class="fixed bottom-8 right-8 p-3 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600 transition transform hover:scale-105"
-    aria-label="Back to Top">
-    <i class="fas fa-arrow-up"></i>
+    class="hidden fixed bottom-8 right-8 z-40 p-3 rounded-full btn-primary shadow-lg" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <!-- Footer Bottom -->
-  <footer class="bg-gray-900 p-5 text-center text-gray-400">
-    <p>&copy; 2024 Nezar Dev. <span data-i18n="footer.rights">All rights reserved.</span></p>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script src="./code/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="./code/script.js"></script>
   <script>
-    VANTA.NET({
-      el: "#home",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x3f79ff,
-      backgroundColor: 0x151c3c,
-      points: 11.0,
-      maxDistance: 10.0,
-      spacing: 16.0
-    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+    if (typeof VANTA !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      VANTA.NET({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3f79ff,
+        backgroundColor: 0x151c3c,
+        points: 11.0,
+        maxDistance: 10.0,
+        spacing: 16.0,
+      });
+    }
   </script>
 </body>
 
