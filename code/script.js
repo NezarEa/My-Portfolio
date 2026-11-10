@@ -23,12 +23,12 @@ const translations = {
       greeting: "Hello, I'm",
       name: "Nezar EL AYACHI",
       roles: [
-        "Web & Mobile Developer",
-        "Backend & Frontend Enthusiast",
-        "Android & Flutter Developer",
+        "Junior Web & Mobile Developer",
+        "Building Laravel, Next.js & Android apps",
+        "Open to internships & junior roles",
       ],
       tagline:
-        "I design and build web and mobile products — from REST APIs and databases to polished, responsive interfaces.",
+        "I build responsive web apps and Android experiences with Laravel, Next.js, Kotlin and Flutter, from APIs and databases to polished interfaces. Seeking junior web/mobile developer roles.",
       location: "Tamesna, Morocco",
       availability: "Open to opportunities",
       cta: {
@@ -140,16 +140,16 @@ const translations = {
       buttons: { github: "Code", demo: "Live demo", apk: "Demo APK" },
       items: [
         {
-          desc: "Multilingual e-commerce platform for parapharmacy products with catalog, search, cart, an admin area and full platform management.",
+          desc: "Built a multilingual parapharmacy storefront with product catalog, search, cart and an admin area for managing the platform.",
         },
         {
-          desc: "Secure, high-performance e-commerce website with an intuitive shopping experience for customers and powerful tools for admins.",
+          desc: "Developed a Laravel shop with customer shopping flows and administration tools for managing products and orders.",
         },
         {
-          desc: "Android app for managing taxi rides with real-time maps, authentication and API calls.",
+          desc: "Created an Android taxi booking app with authentication, API integration and map based ride management.",
         },
         {
-          desc: "Mobile app to track and reduce your daily ecological footprint.",
+          desc: "Built an Android app for tracking everyday environmental impact, with Firebase data and chart based progress views.",
         },
         {
           desc: "Dynamic web app built with HTML, CSS, JavaScript and PHP for content-driven sites.",
@@ -202,12 +202,12 @@ const translations = {
       greeting: "Bonjour, je suis",
       name: "Nezar EL AYACHI",
       roles: [
-        "Développeur Web & Mobile",
-        "Passionné Backend & Frontend",
-        "Développeur Android & Flutter",
+        "Développeur Web & Mobile Junior",
+        "Applications Laravel, Next.js & Android",
+        "Ouvert aux stages & postes junior",
       ],
       tagline:
-        "Je conçois et développe des produits web et mobiles — des API REST et bases de données aux interfaces soignées et responsives.",
+        "Je crée des applications web responsives et des expériences Android avec Laravel, Next.js, Kotlin et Flutter, des API et bases de données aux interfaces soignées. À la recherche de postes junior web/mobile.",
       location: "Tamesna, Maroc",
       availability: "Ouvert aux opportunités",
       cta: {
@@ -319,16 +319,16 @@ const translations = {
       buttons: { github: "Code", demo: "Démo", apk: "APK démo" },
       items: [
         {
-          desc: "Plateforme e-commerce multilingue dédiée aux produits de parapharmacie : catalogue, recherche, panier, espace d'administration et gestion complète de la plateforme.",
+          desc: "Développement d'une boutique multilingue de parapharmacie avec catalogue, recherche, panier et espace d'administration.",
         },
         {
-          desc: "Site e-commerce sécurisé et performant, offrant une expérience d'achat intuitive aux clients et des outils de gestion puissants aux administrateurs.",
+          desc: "Développement d'une boutique Laravel avec parcours d'achat et outils d'administration des produits et commandes.",
         },
         {
-          desc: "Application Android de gestion de trajets taxi avec carte en temps réel, authentification et appels API.",
+          desc: "Création d'une application Android de réservation de taxi avec authentification, intégration API et gestion des trajets sur carte.",
         },
         {
-          desc: "Application mobile pour suivre et réduire son empreinte écologique au quotidien.",
+          desc: "Développement d'une application Android de suivi de l'impact environnemental avec données Firebase et graphiques de progression.",
         },
         {
           desc: "Application web dynamique construite avec HTML, CSS, JavaScript et PHP.",
