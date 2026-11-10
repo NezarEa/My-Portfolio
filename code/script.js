@@ -137,7 +137,7 @@ const translations = {
       title: "Projects",
       subtitle: "Selected work",
       viewAll: "View all on GitHub",
-      buttons: { github: "Code", demo: "Live demo", apk: "Demo APK" },
+      buttons: { github: "Code", demo: "Live demo", liveView: "Live view", apk: "Demo APK" },
       items: [
         {
           desc: "Built a multilingual parapharmacy storefront with product catalog, search, cart and an admin area for managing the platform.",
@@ -159,6 +159,10 @@ const translations = {
         },
         {
           desc: "Android contact manager with dark mode, language selection, quick call/SMS actions and recent calls.",
+        },
+        {
+          desc: "Built a trilingual medical and pharmacy storefront with searchable products, stock information and cart-to-WhatsApp ordering, plus admin inventory tools and Odoo catalog sync.",
+          skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SQLite", "Drizzle ORM", "next-intl", "Odoo Sync"],
         },
       ],
     },
@@ -316,7 +320,7 @@ const translations = {
       title: "Projets",
       subtitle: "Travaux sélectionnés",
       viewAll: "Voir tout sur GitHub",
-      buttons: { github: "Code", demo: "Démo", apk: "APK démo" },
+      buttons: { github: "Code", demo: "Démo", liveView: "Voir le site", apk: "APK démo" },
       items: [
         {
           desc: "Développement d'une boutique multilingue de parapharmacie avec catalogue, recherche, panier et espace d'administration.",
@@ -338,6 +342,10 @@ const translations = {
         },
         {
           desc: "Gestionnaire de contacts Android avec mode sombre, choix de langue, actions rapides (appels/SMS) et appels récents.",
+        },
+        {
+          desc: "Boutique médicale et pharmacie trilingue avec produits recherchables, informations de stock, commande panier vers WhatsApp, outils d'inventaire admin et synchronisation catalogue Odoo.",
+          skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SQLite", "Drizzle ORM", "next-intl", "Odoo Sync"],
         },
       ],
     },
