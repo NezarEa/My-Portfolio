@@ -4,7 +4,7 @@ Personal portfolio of **Nezar EL AYACHI**, a web & mobile developer.
 A single-page, bilingual (English / French) resume-style site featuring experience,
 education, skills, languages and projects.
 
-**Live:** https://nezarea.github.io/My-Portfolio/
+**Live:** [https://nexarsoftware.com/](https://nexarsoftware.com/)
 
 ## Features
 
